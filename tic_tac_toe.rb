@@ -61,7 +61,6 @@ class Game
     print "#{player1}, type your in-game letter (caps included): "
     player1_letter = gets.chomp!
     while player1_letter.length > 1 || player1_letter.empty? ||player1_letter.ord < 65 || player1_letter.ord > 90 && player1_letter.ord < 97 || player1_letter.ord > 122
-      #true triggers this, so it has to be false
       print "That's not valid, select other: "
       player1_letter = gets.chomp!
     end
