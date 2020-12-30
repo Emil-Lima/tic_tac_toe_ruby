@@ -61,7 +61,8 @@ class Game < Player
     player1 = Player.new(gets.chomp!)
     print "#{player1}, type your in-game letter (caps included): "
     player1_letter = gets.chomp!
-    while player1_letter.length > 1 || player1_letter.empty? ||player1_letter.ord < 65 || player1_letter.ord > 90 && player1_letter.ord < 97 || player1_letter.ord > 122
+    while player1_letter.length > 1 || player1_letter.empty? || player1_letter.ord < 65 ||
+          player1_letter.ord > 90 && player1_letter.ord < 97 || player1_letter.ord > 122
       print "That's not valid, select other: "
       player1_letter = gets.chomp!
     end
@@ -72,7 +73,9 @@ class Game < Player
     player2 = Player.new(gets.chomp!)
     print "#{player2}, type your in-game letter (caps included): "
     player2_letter = gets.chomp!
-    while player2_letter.length > 1 || player2_letter.empty? || player2_letter == player1_letter || player2_letter.empty? ||player2_letter.ord < 65 || player2_letter.ord > 90 && player2_letter.ord < 97 || player2_letter.ord > 122
+    while player2_letter.length > 1 || player2_letter.empty? || player2_letter == player1_letter ||
+          player2_letter.empty? || player2_letter.ord < 65 || player2_letter.ord > 90 && player2_letter.ord < 97 ||
+          player2_letter.ord > 122
       print "That's not valid, select other: "
       player2_letter = gets.chomp!
     end
