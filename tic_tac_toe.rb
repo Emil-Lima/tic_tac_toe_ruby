@@ -37,12 +37,13 @@ class Player
 end
 
 # class that defines the logic of the game
-class Game
+class Game < Player
   include Elements
 
   def self.restart
+    @@num_of_player = 1
     print "Do you want to play again? Type either 'yes' or 'no': "
-    choice = gets.chomp!
+    choice = gets.chomp!.downcase
     case choice
     when 'yes'
       Game.start_game
